@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Click</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=favorite"/>
+  <style>
+    .heart {
+      font-family: 'Material Symbols Outlined';
+      font-size: 48px;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .heart.active {
+    
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <span class="heart" onclick="toggleHeart()">favorite</span>
+
+  <script>
+    function toggleHeart() {
+      const heart = document.querySelector('.heart');
+      heart.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
