@@ -1,5 +1,95 @@
-{
-  "dependencies": {
-    "nodemon": "^3.0.1"
-  }
-}
+PART 2 — Migrate the Same PHP App to Linux
+---------------------------------------------------
+Step 1: Open Linux VM (Ubuntu)
+Step 2: Install Apache + PHP
+
+Run these commands:
+
+sudo apt update
+sudo apt install apache2 php libapache2-mod-php -y
+
+
+Take screenshot.
+
+Step 3: Create project folder
+sudo mkdir /home/student/php_app_lab2
+
+Step 4: Copy project (drag-drop using VirtualBox Shared Folder or FileZilla SFTP)
+
+👉 Easiest method (FileZilla SFTP):
+
+Open FileZilla
+
+Host: sftp://your-linux-ip
+
+Username: student
+
+Password: (your Ubuntu password)
+
+Upload your php_app_lab2 folder into:
+
+/home/student/php_app_lab2/
+
+
+Take screenshot.
+
+Step 5: Move project into Apache directory
+sudo cp -r /home/student/php_app_lab2 /var/www/html/
+
+
+Now folder exists:
+
+/var/www/html/php_app_lab2
+
+Step 6: Give permissions
+sudo chmod -R 755 /var/www/html/php_app_lab2
+
+Step 7: Restart Apache
+sudo systemctl restart apache2
+
+Step 8: Run PHP app on Linux
+
+Open browser inside Ubuntu:
+
+http://localhost/php_app_lab2/
+
+
+Your app should run successfully.
+
+📸 Take these Linux screenshots:
+
+Apache & PHP installation
+
+Folder inside /var/www/html
+
+Browser showing PHP app running in Linux
+
+✔️ Linux migration complete!
+
+---------------------------------------------------
+📍 PART 3 — What to Upload in Google Docs
+---------------------------------------------------
+Windows Screenshots
+
+✔ GitHub App
+✔ C:\php_app_lab2 folder
+✔ XAMPP running
+✔ Project inside C:\xampp\htdocs
+✔ Browser showing http://localhost/php_app_lab2/
+
+Linux Screenshots
+
+✔ Apache + PHP installation
+✔ /home/student/php_app_lab2 folder
+✔ /var/www/html/php_app_lab2 folder
+✔ Browser showing PHP app on Linux
+
+---------------------------------------------------
+🎉 Your Assignment is 100% Complete
+
+If you want, I can prepare:
+✅ A Google Doc format answer
+✅ A ready-made PHP app zip file
+✅ Commands list in one page for printing
+
+Just tell me “make Google Doc answer” or “give ready ZIP”.
